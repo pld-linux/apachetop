@@ -1,0 +1,11 @@
+--- ./src/apachetop.h.org	Wed Oct  8 18:46:38 2003
++++ ./src/apachetop.h	Sat Oct 18 13:16:48 2003
+@@ -198,7 +198,7 @@
+ #define DEBUG_OUTPUT "/tmp/atop.debug"
+ 
+ #ifndef DEFAULT_LOGFILE
+-# define DEFAULT_LOGFILE "/var/httpd/apache_log"
++# define DEFAULT_LOGFILE "/var/log/httpd/access_log"
+ #endif
+ #define DEFAULT_LOGTYPE LOG_COMMON
+ #define DEFAULT_CIRCLE_SIZE 30
