@@ -1,12 +1,12 @@
 Summary:	Apache top-like display
 Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
-Version:	0.8.1
+Version:	0.9
 Release:	1
 License:	BSD
 Group:		Networking/Utilities
 Source0:	http://clueful.shagged.org/%{name}/files/%{name}-%{version}.tar.gz
-# Source0-md5:	8f7f9ab2b196423307a5e18e0bfdf6d2
+# Source0-md5:	ce0c09d87d7e91df5b08389aaa2d805b
 Patch0:		%{name}-log_location.patch
 URL:		http://clueful.shagged.org/apachetop/
 BuildRequires:	ncurses-devel
@@ -29,7 +29,7 @@ najbardziej popularne URL-e, itp.
 %configure
 %{__make} \
 	CXX=%{__cxx} \
-	CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+	CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses -pthread"
 
 %install
 rm -rf $RPM_BUILD_ROOT
