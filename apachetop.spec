@@ -4,12 +4,12 @@
 Summary:	Apache top-like display
 Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	BSD
 Group:		Networking/Utilities
 Source0:	http://clueful.shagged.org/%{name}/files/%{name}-%{version}.tar.gz
-# Source0-md5:	02fd919e77b9791f6162cb462daa7749
+# Source0-md5:	b68994e5dab65ac273465d0218083b71
 URL:		http://clueful.shagged.org/apachetop/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,21 +24,23 @@ Apache'a, w³±czaj±c w to zapytania na sekundê, bajty na sekundê,
 najbardziej popularne URL-e, itp.
 
 %prep
-%setup -q -n ApacheTop-%{version}
+%setup -q
 
 %build
-%{__make} linux \
-	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+%configure
+%{__make} \
+	CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
-%attr(755,root,root) %{_bindir}/*
+%doc AUTHORS ChangeLog INSTALL NEWS README TODO
+%attr(755,root,root) %{_sbindir}/*
+%{_mandir}/man1/*
