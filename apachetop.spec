@@ -1,5 +1,5 @@
 Summary:	Apache top-like display
-Summary(pl):	top-podobny wy¶wietlacz pracy apache
+Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
 Version:	0.4
 Release:	1
@@ -17,9 +17,9 @@ A curses-based top-like display for Apache information, including
 requests per second, bytes per second, most popular URLs, etc.
 
 %description -l pl
-Bazuj±cy na curses top-podobny wy¶wietlacz informacji dla Apache,
-w³±czaj±c w to ¿±dania na sekundê, bajty na sekundê, najbardziej
-popularne URL-e, itp.
+Oparty na curses podobny do topa program pokazuj±cy informacje o pracy
+Apache'a, w³±czaj±c w to zapytania na sekundê, bajty na sekundê,
+najbardziej popularne URL-e, itp.
 
 %prep
 %setup -q -n ApacheTop-%{version}
