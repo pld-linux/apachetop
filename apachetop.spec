@@ -1,5 +1,5 @@
 Summary:	Apache top-like display
-Summary(pl):	Podobny do top program pokazuj±cy pracê Apache'a
+Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
 Version:	0.11
 Release:	1
