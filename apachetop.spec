@@ -1,14 +1,16 @@
+#
+# TODO (when upgrading): switch to .bz2 source
+#
 Summary:	Apache top-like display
 Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
 Version:	0.4
 Release:	1
 License:	BSD
-Group:		Network/Monitoring
-######		Unknown group!
+Group:		Networking/Utilities
 Source0:	http://clueful.shagged.org/%{name}/files/%{name}-%{version}.tar.gz
 # Source0-md5:	b0258a0e771c943415717591606c909e
-URL:		http://clueful.shagged.org/%{name}
+URL:		http://clueful.shagged.org/apachetop/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,10 +28,11 @@ najbardziej popularne URL-e, itp.
 
 %build
 %{__make} linux \
-	CFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"
+	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 install -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 %clean
