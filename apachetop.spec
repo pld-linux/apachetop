@@ -9,7 +9,10 @@ Source0:	http://clueful.shagged.org/%{name}/files/%{name}-%{version}.tar.gz
 # Source0-md5:	45c4f95d856cc8fce10a7d43af8b0d34
 Patch0:		%{name}-log_location.patch
 URL:		http://clueful.shagged.org/apachetop/
+BuildRequires:	fam-devel
 BuildRequires:	ncurses-devel
+BuildRequires:	pcre-devel
+BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
