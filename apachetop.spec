@@ -1,12 +1,12 @@
 Summary:	Apache top-like display
-Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
+Summary(pl):	Podobny do top program pokazuj±cy pracê Apache'a
 Name:		apachetop
-Version:	0.10
+Version:	0.11
 Release:	1
 License:	BSD
 Group:		Networking/Utilities
 Source0:	http://clueful.shagged.org/%{name}/files/%{name}-%{version}.tar.gz
-# Source0-md5:	dd5e9b7f230ebdd6fa463190b12b111e
+# Source0-md5:	5a83938eba950c74d117ef9ef32fef74
 Patch0:		%{name}-log_location.patch
 URL:		http://clueful.shagged.org/apachetop/
 BuildRequires:	ncurses-devel
