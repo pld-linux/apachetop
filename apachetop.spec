@@ -1,8 +1,11 @@
+#
+# TODO: fam support is broken (it always needs running & working fam)
+#
 Summary:	Apache top-like display
 Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
 Version:	0.12.5
-Release:	1
+Release:	2
 Epoch:		1
 License:	BSD
 Group:		Networking/Utilities
@@ -10,7 +13,6 @@ Source0:	http://clueful.shagged.org/%{name}/files/%{name}-%{version}.tar.gz
 # Source0-md5:	47c40c26319d57100008a2a56dcefe06
 Patch0:		%{name}-log_location.patch
 URL:		http://clueful.shagged.org/apachetop/
-BuildRequires:	fam-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	pcre-devel
 BuildRequires:	readline-devel
@@ -30,7 +32,9 @@ najbardziej popularne URL-e, itp.
 %patch0 -p1
 
 %build
-%configure
+%configure \
+	--without-fam
+
 %{__make} \
 	CXX=%{__cxx} \
 	CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses -pthread"
