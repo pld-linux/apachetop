@@ -5,7 +5,7 @@ Summary:	Apache top-like display
 Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
 Version:	0.12.5
-Release:	2
+Release:	3
 Epoch:		1
 License:	BSD
 Group:		Networking/Utilities
@@ -16,6 +16,7 @@ URL:		http://clueful.shagged.org/apachetop/
 BuildRequires:	ncurses-devel
 BuildRequires:	pcre-devel
 BuildRequires:	readline-devel
+BuildRequires:	adns-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,9 +32,10 @@ najbardziej popularne URL-e, itp.
 %setup -q
 %patch0 -p1
 
+sed -i -e 's#fam#fambroken#g' configure*
+
 %build
-%configure \
-	--without-fam
+%configure
 
 %{__make} \
 	CXX=%{__cxx} \
