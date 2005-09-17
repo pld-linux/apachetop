@@ -5,7 +5,7 @@ Summary:	Apache top-like display
 Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
 Name:		apachetop
 Version:	0.12.5
-Release:	3
+Release:	4
 Epoch:		1
 License:	BSD
 Group:		Networking/Utilities
