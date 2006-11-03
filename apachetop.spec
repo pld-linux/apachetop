@@ -38,7 +38,7 @@ sed -i -e 's#fam#fambroken#g' configure*
 %configure
 
 %{__make} \
-	CXX=%{__cxx} \
+	CXX="%{__cxx}" \
 	CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses -pthread"
 
 %install
