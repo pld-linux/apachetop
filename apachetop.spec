@@ -2,7 +2,7 @@
 # TODO: fam support is broken (it always needs running & working fam)
 #
 Summary:	Apache top-like display
-Summary(pl.UTF-8):   Podobny do topa program pokazujący pracę Apache'a
+Summary(pl.UTF-8):	Podobny do topa program pokazujący pracę Apache'a
 Name:		apachetop
 Version:	0.12.6
 Release:	1
