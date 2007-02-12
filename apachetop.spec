@@ -2,7 +2,7 @@
 # TODO: fam support is broken (it always needs running & working fam)
 #
 Summary:	Apache top-like display
-Summary(pl):	Podobny do topa program pokazuj±cy pracê Apache'a
+Summary(pl.UTF-8):   Podobny do topa program pokazujÄ…cy pracÄ™ Apache'a
 Name:		apachetop
 Version:	0.12.6
 Release:	1
@@ -23,9 +23,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A curses-based top-like display for Apache information, including
 requests per second, bytes per second, most popular URLs, etc.
 
-%description -l pl
-Oparty na curses podobny do topa program pokazuj±cy informacje o pracy
-Apache'a, w³±czaj±c w to zapytania na sekundê, bajty na sekundê,
+%description -l pl.UTF-8
+Oparty na curses podobny do topa program pokazujÄ…cy informacje o pracy
+Apache'a, wÅ‚Ä…czajÄ…c w to zapytania na sekundÄ™, bajty na sekundÄ™,
 najbardziej popularne URL-e, itp.
 
 %prep
