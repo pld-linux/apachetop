@@ -1,0 +1,28 @@
+--- apachetop-0.12.6/src/apachetop.h~	2009-04-12 23:29:29.388766094 +0200
++++ apachetop-0.12.6/src/apachetop.h	2009-04-12 23:30:19.855223788 +0200
+@@ -1,6 +1,8 @@
+ #ifndef _APACHETOP_H_
+ #define _APACHETOP_H_
+ 
++#define _GNU_SOURCE=1
++
+ #if HAVE_CONFIG_H
+ # include "config.h"
+ #endif
+@@ -25,6 +25,7 @@
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <limits.h>
+ 
+ #if TIME_WITH_SYS_TIME
+ # include <sys/time.h>
+@@ -90,7 +92,7 @@
+ #define getMAX(a,b) (a > b ? a : b)
+ 
+ #ifndef MAXPATHLEN
+-# define MAXPATHLEN 128
++# define MAXPATHLEN (PATH_MAX+1)
+ #endif
+ 
+ /* upon startup, each input file is put into an element of this array,
