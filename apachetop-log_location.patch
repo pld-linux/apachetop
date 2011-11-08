@@ -5,7 +5,7 @@
  /* this can be overridden from config.h via ./configure --with-logfile .. */
  #ifndef DEFAULT_LOGFILE
 -# define DEFAULT_LOGFILE "/var/log/apache2/access.log"
-+# define DEFAULT_LOGFILE "/var/log/httpd/access.log"
++# define DEFAULT_LOGFILE "/var/log/httpd/access_log"
  #endif
  #define DEFAULT_CIRCLE_SIZE 30
  #define DEFAULT_CIRCLE_MODE TIMED_CIRCLE
