@@ -5,14 +5,14 @@ Summary:	Apache top-like display
 Summary(pl.UTF-8):	Podobny do topa program pokazujący pracę Apache'a
 Name:		apachetop
 Version:	0.12.6
-Release:	4
+Release:	5
 Epoch:		1
 License:	BSD
 Group:		Networking/Utilities
 Source0:	http://www.webta.org/apachetop/%{name}-%{version}.tar.gz
 # Source0-md5:	604283ac4bbbddd98fc9b1f11381657e
-Patch0:		%{name}-log_location.patch
-Patch1:		%{name}-gcc4.patch
+Patch0:		%{name}-debian.patch
+Patch1:		%{name}-log_location.patch
 Patch2:		%{name}-maxpath.patch
 URL:		http://www.webta.org/projects/apachetop/
 BuildRequires:	ncurses-devel
@@ -39,11 +39,14 @@ najbardziej popularne URL-e, itp.
 sed -i -e 's#fam#fambroken#g' configure*
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make} \
 	CXX="%{__cxx}" \
-	CXXFLAGS="%{rpmcflags} -I/usr/include/ncurses -pthread"
+	CXXFLAGS="%{rpmcflags} %{rpmcppflags} -I/usr/include/ncurses -pthread"
 
 %install
 rm -rf $RPM_BUILD_ROOT
