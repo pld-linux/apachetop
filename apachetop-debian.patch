@@ -6406,7 +6406,7 @@ diff -Naurp apachetop.orig/src/apachetop.cc apachetop/src/apachetop.cc
  	if (cf.input_count == 0)
  	{
 -		if (new_file(DEFAULT_LOGFILE, SEEK_TO_END) != -1)
-+		if (new_file("/var/log/apache2/access.log", SEEK_TO_END) != -1)
++		if (new_file(DEFAULT_LOGFILE, SEEK_TO_END) != -1)
  			cf.input_count++;
 +		else
 +		{

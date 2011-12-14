@@ -5,7 +5,7 @@ Summary:	Apache top-like display
 Summary(pl.UTF-8):	Podobny do topa program pokazujący pracę Apache'a
 Name:		apachetop
 Version:	0.12.6
-Release:	6
+Release:	7
 Epoch:		1
 License:	BSD
 Group:		Networking/Utilities
@@ -42,7 +42,8 @@ sed -i -e 's#fam#fambroken#g' configure*
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-logfile=/var/log/httpd/access_log
 
 %{__make} \
 	CXX="%{__cxx}" \
