@@ -5,7 +5,7 @@ Summary:	Apache top-like display
 Summary(pl.UTF-8):	Podobny do topa program pokazujący pracę Apache'a
 Name:		apachetop
 Version:	0.12.6
-Release:	9
+Release:	10
 Epoch:		1
 License:	BSD
 Group:		Networking/Utilities
